@@ -21,7 +21,7 @@ data "aws_ami" "ubuntu" {
 
 
 
-resource "aws_instance" "from-atlantis" {
+resource "aws_instance" "from-atlantis-change" {
   ami           = data.aws_ami.ubuntu.id
   instance_type = "t3.micro"
   vpc_security_group_ids = [aws_security_group.kk_sec_grp.id]
